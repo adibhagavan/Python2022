@@ -399,9 +399,198 @@ ys function and list append functions to achieve this.
 [['Inceptez'], ['Apple']]
 >>>
 
+print('22. Create a list of values lst=[10,20,40,30,20], find the first, last values of the list, sort the list in '
+      'ascending order, sort in descending order, print the minumum and maximum values of the descending sorted list, '
+      'find the sum of all elements in the list, remove the number 30 and 20 from the list.')
+lst=[10,20,40,30,20]
+lst.sort()
+print(f"First element in list is {str(lst[0])} and last element value is {lst[lst.__len__()-1]}")
+print(str(lst))
+lst.reverse()
+print(str(lst))
+print(f"max amount in list is {str(lst[0])}, min amount in list is {lst[lst.__len__()-1]} ")
+Total=int()
+for i in lst:
+    Total=Total+i
+print(Total)
+print(str(lst))
+lst.remove(30)
+lst.remove(20)
+print(str(lst))
+>>> print (f"min of tup is {tmp_lst[0]} and max of tup is {tmp_lst[tmp_lst.__len
+__()-1]}")
+min of tup is 10 and max of tup is 40
+23. Do the above same (step 25) operation in the tuple of elements tup=(10,20,40
+,30,20)
+>>> tup=(10,20,40,30,20)
+>>> tup[0]
+10
+>>> tup.sort()
+>>> tup
+(10, 20, 40, 30, 20)
+>>> tmp_lst=list(tup)
+>>> tmp_lst
+[10, 20, 40, 30, 20]
+>>> tmp_lst[0]
+10
+>>> tmp_lst[tmp_lst.__len__()-1]
+20
+>>> tmp_lst.sort()
+>>> tmp_lst[tmp_lst.__len__()-1]
+40
+>>> tmp_lst.reverse()
+>>> tmp_lst
+[40, 30, 20, 20, 10]
+>>> tmp_lst.sort()
 
+24. Convert the string to list from str1="Inceptez Technologies Pvt Ltd" to lst_str1=['Inceptez', 'Technologies', 'Pvt', 'Ltd']
+str1="Inceptez Technologies Pvt Ltd"
+str2 = str1.split(' ')
+print(str2)
+print("'24. Convert the string to list from str1="Inceptez Technologies Pvt Ltd" to lst_str1=['Inceptez', 'Technologies', 'Pvt', 'Ltd']'")
 
+25. With the below given data in the format of list(list(elements))
+emplstlst= [["1", ("Arun","Kumar"), "10000"],["2", ("Bala","Mohan"), "12000"]]
 
+Display the below output for all of the 5 given simple scenarios
+a. Convert the first element of the above list into tuple
+("1", ("Arun","Kumar"), "10000")
+b. Print the second element's second element and reverse the first and last name as given below
+("Mohan","Bala")
+c. Convert the emplstlst into tuples(tuples)
+emplstlst= (("1", ("Arun","Kumar"), "10000"),("2", ("Bala","Mohan"), "12000"))
+d. Add all salary of the above list
+22000
+
+>>> emplstlst= [["1", ("Arun","Kumar"), "10000"],["2", ("Bala","Mohan"), "12000"
+]]
+>>> emplstlst[0]
+['1', ('Arun', 'Kumar'), '10000']
+>>> tup1=list( emplstlst[0])
+>>> tup1
+['1', ('Arun', 'Kumar'), '10000']
+>>> tup1=tuple( emplstlst[0])
+>>> tup1
+('1', ('Arun', 'Kumar'), '10000')
+>>> emplstlst[1][1]
+('Bala', 'Mohan')
+>>> emplstlst[1][1][1]
+'Mohan'
+>>> emplstlst[1][1][0]
+'Bala'
+>>> emplstlst[1][1][0]='Mohan'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+>>> tup3=(emplstlst[1][1][1],emplstlst[1][1][0])
+>>> tup3
+('Mohan', 'Bala')
+>>> tuple(tuple(emplstlst[0]),emplstlst[1])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: tuple expected at most 1 arguments, got 2
+>>> tuple(emplstlst[0])
+('1', ('Arun', 'Kumar'), '10000')
+>>> tup3 = (tuple(emplstlst[0]),tuple(emplstlst[1]))
+>>> tup3
+(('1', ('Arun', 'Kumar'), '10000'), ('2', ('Bala', 'Mohan'), '12000'))
+>>> emplstlst= [["1", ("Arun","Kumar"), "10000"],["2", ("Bala","Mohan"), "12000"
+]]
+>>> tsal =emplstlst[0][2] + emplstlst[1][2]
+>>> tsal
+'1000012000'
+>>> tsal = int(emplstlst[0][2]) + int(emplstlst[1][2])
+>>> tsal
+22000
+
+26. Write a program using for loop to print even numbers and odd numbers in the below range of data (generate using range function) [5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20] output should be with even as 6,8,10,12,14,16,18,20 and odd as 5,7,9,11,13,15,17,19.
+
+lstrange =[5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+for i in lstrange.range():
+    print(i)
+lstrange = [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+print(lstrange)
+lsteven = list()
+lstodd = list()
+for i in lstrange:
+    if
+i % 2 == 0:
+lsteven.append(i)
+else:
+lstodd.append(i)
+
+print(f"even nos list {lsteven}, odd nos list is {lstodd}")
+
+27. Write a while loop to loop from 0 till 21 with the increment of 3, the result should be exactly 3,6,9,12,15,18 and store this result in a list
+
+i=0
+lst =list()
+while i < 18:
+    i=i+3
+    lst.append(i)
+print(lst)
+
+#28. Write a for or while loop to print the cube of 4, result should be 4*4*4=64
+# (initiate some variable outside the loop with 4 and loop through 3 times to achieve the result)
+
+fourcube =4
+i=1
+while (i <=2):
+    fourcube=fourcube*4
+    print(fourcube)
+    i=i+1
+print(fourcube)
+
+#29. Create a list as sal_lst=[10000,20000,30000,10000,15000], loop through the list and
+# add 1000 bonus to the salary and store in another list sal_bonus_lst=[11000,21000,31000,11000,16000]
+#then store the bonus applied salary in another list where sal>11000
+
+sal_lst=[10000,20000,30000,10000,15000]
+sal_gt10000 =list()
+sal_bonus_lst=list()
+for i in sal_lst:
+    sal_bonus_lst.append(i+1000)
+    if i > 11000:
+        sal_gt10000.append(i)
+print(sal_bonus_lst)
+print(sal_gt10000)
+
+#30. Write a do while loop to print “Inceptez technologies” n number of times as per the input you get from
+# the user. Minimum it has to be printed at least one time regardless of the user input.
+
+user_input = int(input())
+i=1
+while (True):
+    print("Inceptez technologies")
+    if i < user_input:
+        i+=1
+    else:
+        break
+
+#31. From the given list of list of elements produce the following output using nested for loop
+#lst1=[[10,20],[30,40,50],[60,70,80]], calculate the sum of all number,
+# calculate the min value and the max value of all the elements in the lst1.
+
+lst1=[[10,20],[30,40,50],[60,70,80]]
+total_sum =0
+lst2 = list()
+min,max=0,0
+for i in lst1:
+    for j in i:
+        total_sum=total_sum+j
+        lst2.append(j)
+print(total_sum)
+print(str(lst2.sort()))
+print(f"min amount in list is {str(lst2[0])}, max amount in list is {lst2[lst2.__len__()-1]} ")
+
+#32. Create a looping construct to create 3 tables upto 10 values. Output should be like this…
+#1 x 3 = 3
+#2 x 3 = 6
+#10 x 3 = 30
+i=1
+while (i<=10):
+    print(str(3),str('*'),i,"=",str(3*i))
+    i+=1
 
 
 
